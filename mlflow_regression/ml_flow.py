@@ -41,5 +41,4 @@ with mlflow.start_run():
 loaded_model = mlflow.pyfunc.load_model(model_info_reg.model_uri)
 
 predictions = loaded_model.predict(X_test)
-
 print(predictions)
