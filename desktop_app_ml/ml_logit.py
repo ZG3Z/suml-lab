@@ -110,12 +110,11 @@ class TitanicApp(customtkinter.CTk):
 
         try:
             result = predict(data_for_prediction, 'ml_models/model.pkl')
-            prediction = "Survived" if result == 1 else "Not Survived"
         except Exception as e:
             tkinter.messagebox.showerror('Error', f'Error during prediction: {str(e)}')
             return
 
-        tkinter.messagebox.showinfo('Prediction Result', f'The predicted outcome is: {prediction}')
+        tkinter.messagebox.showinfo('Prediction Result', f'The predicted outcome is: {result}')
 
 
 
