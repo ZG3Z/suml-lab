@@ -1,10 +1,10 @@
 from pydantic import BaseModel
 
 class Passenger(BaseModel):
-    Pclass: int
-    Age: int
+    Pclass: str
+    Age: float
     SibSp: int
     Parch: int
     Fare: float
-    Embarked: int
-    Male: int
+    Embarked: str
+    Male: str
